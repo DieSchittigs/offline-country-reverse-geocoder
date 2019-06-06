@@ -93,10 +93,10 @@ function pointInPolygon( $targetX, $targetY, $points_string ) {
 		 * (1/4 of the Earth's circumference) in any direction,
 		 * the answer is "no".
 		 */
-		if ( $targetY && ( intval( abs( $pointY - $targetY ) ) > 90 ) ) {
+		if ( $targetY && ( intval( abs( (float) $pointY - (float) $targetY ) ) > 90 ) ) {
 			return false;
 		}
-		if ( $targetX && ( intval( abs( $pointX - $targetX ) ) > 90 ) ) {
+		if ( $targetX && ( intval( abs( (float) $pointX - (float) $targetX ) ) > 90 ) ) {
 			return false;
 		}
 
